@@ -216,7 +216,7 @@ class StatefulMapController {
           @required List<LatLng> points,
           Color color = Colors.lightBlue,
           double borderWidth = 0.0,
-          Color borderColor = const Color(0xFFFFFF00)}) =>
+          Color borderColor = Colors.red}) =>
       _polygonsState.addPolygon(
           name: name,
           points: points,
