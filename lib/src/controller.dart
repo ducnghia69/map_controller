@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -233,7 +234,7 @@ class StatefulMapController {
       Icon markerIcon = const Icon(Icons.location_on),
       bool noIsolate = false}) async {
  //   print("From geojson $data");
-    print("nghia deppppppppppppppppppppppppppppppppppp trai");
+    print("nghia xau trai");
     final geojson = GeoJson();
     geojson.processedFeatures.listen((GeoJsonFeature feature) {
       switch (feature.type) {
@@ -281,7 +282,7 @@ class StatefulMapController {
           for (final poly in mp.polygons) {
             for (final geoSerie in poly.geoSeries) {
               unawaited(
-                  addPolygon(name: geoSerie.name, points: geoSerie.toLatLng()));
+                  addPolygon(name: Random().nextInt(100000).toString(), points: geoSerie.toLatLng()));
             }
           }
           break;
