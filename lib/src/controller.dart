@@ -282,7 +282,7 @@ class StatefulMapController {
           for (final poly in mp.polygons) {
             for (final geoSerie in poly.geoSeries) {
               unawaited(
-                  addPolygon(name: Random().nextInt(100000).toString(), points: geoSerie.toLatLng(), color: Colors.red, borderColor: Colors.purple));
+                  addPolygon(name: Random().nextInt(100000).toString(), points: geoSerie.toLatLng(), color: Colors.red, borderColor: Colors.black, borderWidth: 5));
             }
           }
           break;
