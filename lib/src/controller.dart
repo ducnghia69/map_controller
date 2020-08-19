@@ -233,7 +233,7 @@ class StatefulMapController {
       Icon markerIcon = const Icon(Icons.location_on),
       bool noIsolate = false}) async {
  //   print("From geojson $data");
-
+    print("nghia deppppppppppppppppppppppppppppppppppp trai");
     final geojson = GeoJson();
     geojson.processedFeatures.listen((GeoJsonFeature feature) {
       switch (feature.type) {
