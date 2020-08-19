@@ -234,7 +234,7 @@ class StatefulMapController {
       Icon markerIcon = const Icon(Icons.location_on),
       bool noIsolate = false}) async {
  //   print("From geojson $data");
-    print("nghia commit + ${DateTime.now()}");
+    print("nghia commit ${DateTime.now()}");
     final geojson = GeoJson();
     geojson.processedFeatures.listen((GeoJsonFeature feature) {
       switch (feature.type) {
@@ -282,7 +282,7 @@ class StatefulMapController {
           for (final poly in mp.polygons) {
             for (final geoSerie in poly.geoSeries) {
               unawaited(
-                  addPolygon(name: Random().nextInt(100000).toString(), points: geoSerie.toLatLng()));
+                  addPolygon(name: Random().nextInt(100000).toString(), points: geoSerie.toLatLng(), color: Colors.red, borderColor: Colors.purple));
             }
           }
           break;
